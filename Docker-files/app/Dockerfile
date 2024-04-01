@@ -3,7 +3,7 @@ LABEL "Project"="Vprofile"
 LABEL "Author"="Milosz"
 RUN apt update && apt install maven -y
 RUN git clone --branch docker https://github.com/GengarStacks/vprofile-project.git
-RUN cd vprofile-project && git checkout docker && mvn install
+RUN cd vprofile-project && mvn install
 
 FROM tomcat:9-jre11
 RUN rm -rf /usr/local/tomcat/webapps/*
